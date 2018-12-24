@@ -1,0 +1,30 @@
+{% extends 'master.html' %}
+
+{% block content %}
+
+<body>
+    <div class="container">
+        <br>
+        <h2>Book List</h2>
+        <hr>
+
+        <form action="/create">
+            {% csrf_token %}
+
+            <label for="title" class="form-group">Title: </label>
+            <input class="form-control" type="text" name="title">
+
+            <label for="price" class="form-group">Price: </label>
+            <input class="form-control" type="text" name="price">
+
+            <label for="author" class="form-group">Author: </label>
+            <input class="form-control" type="text" name="author"><br>
+
+            <input type="submit" class="btn btn-success" value="Create">
+        
+        </form>
+        <br>
+    </div>
+</body>
+
+{% endblock %}
